@@ -4,6 +4,7 @@ require_once __DIR__ .'/bootstrap.php';
 
 
 // musí se zaregistrovat AutowirePass
+// neumí přeskakování argumentů
 
 $container = symfonyFromConfig(<<<YAML
 parameters:

@@ -4,7 +4,7 @@ namespace Project;
 
 
 
-class NewsletterManager
+class NewsletterManagerSetter
 {
 
     /**

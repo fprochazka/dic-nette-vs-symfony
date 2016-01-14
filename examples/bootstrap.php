@@ -29,6 +29,8 @@ function netteFromConfig($config)
 	$class = $loader->load(
 		'',
 		function (\Nette\DI\Compiler $compiler) use ($config) {
+			$compiler->addExtension('decorator', new \Nette\DI\Extensions\DecoratorExtension());
+			$compiler->addExtension('inject', new \Nette\DI\Extensions\InjectExtension());
 			$compiler->loadConfig(asfile('config.neon', $config));
 		}
 	);

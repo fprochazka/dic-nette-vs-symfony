@@ -1,7 +1,5 @@
 <?php
 
-use Nette\Configurator;
-
 require_once __DIR__ .'/bootstrap.php';
 
 $loader = new \Nette\DI\ContainerLoader(TEMP_DIR);

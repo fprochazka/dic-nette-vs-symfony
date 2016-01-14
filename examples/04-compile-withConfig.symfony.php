@@ -22,10 +22,10 @@ parameters:
 
 services:
     mailer:
-        class:     Project\Mailer
+        class: Project\Mailer
         arguments: ['%mailer.transport%']
     newsletter_manager:
-        class:     Project\NewsletterManager
+        class: Project\NewsletterManager
         arguments: ["@mailer"]
 YAML
 ));

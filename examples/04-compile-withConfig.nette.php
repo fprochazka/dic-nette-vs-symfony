@@ -13,8 +13,12 @@ parameters:
         transport: sendmail
 
 services:
-    mailer: Project\Mailer(%mailer.transport%)
-    newsletter_manager: Project\NewsletterManager(@mailer)
+    mailer:
+        class: Project\Mailer
+        arguments: [%mailer.transport%]
+    newsletter_manager:
+        class: Project\NewsletterManager
+        arguments: [@mailer]
 NEON
 ));
 

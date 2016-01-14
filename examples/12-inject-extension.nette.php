@@ -9,12 +9,11 @@ decorator:
 		inject: on
 
 services:
-	- Project\HomepagePresenter
+	- Project\HomepagePresenter()
+	- Project\NewsletterManager()
+	- Project\Foo()
+	- Project\Mailer(sendmail)
 NEON
 );
 
-dump($container->getByType(\Project\ConsoleFirstCommand::class));
-dump($container->getByType(\Project\ConsoleSecondCommand::class));
-
-dump($container->findByTag('console.command'));
-dump($container->findByType(\Project\ConsoleCommand::class));
+dump($container->getByType(\Project\HomepagePresenter::class));

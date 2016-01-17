@@ -3,7 +3,7 @@
 require_once __DIR__ .'/bootstrap.php';
 
 
-$container = netteFromConfig(<<<NEON
+$container = netteFromConfig(<<<'NEON'
 parameters:
 	mailer:
 		transport: sendmail
@@ -13,7 +13,7 @@ services:
 	-
 		class: Project\NewsletterManagerSetter
 		setup:
-			- \$mailer(@Project\Mailer)
+			- $mailer(@Project\Mailer)
 NEON
 );
 
